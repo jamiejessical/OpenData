@@ -118,7 +118,7 @@ footer{
     font-family: Arial, sans-serif;
     font-weight: bold;
     font-size: 3vw;
-    top: 40px;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
