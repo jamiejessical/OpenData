@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Homeless Population</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <div class="total-container"></div>
+            <div id="chart" class="chart"></div>
+            <div class="introduction">
+                <img id="imageManhattan" src="img/Manhattan.png" alt="">
+                <img id="imageBronx" src="img/Bronx.png" alt="">
+                <img id="imageBrooklyn" src="img/Brooklyn.png" alt="">
+                <img id="imageQueens" src="img/Queens.png" alt="">
+                <img id="imageStatenIsland" src="img/Staten.png" alt="">
+                <img id="imageSubway" src="img/Subway.png" alt="">
+                <p>New York City's homeless population presents a multifaceted challenge within the urban landscape. Despite various initiatives, including shelter programs and affordable housing projects, providing adequate support remains a persistent issue.</p>
+            </div>
+            <div class="title">
+                <h1>nyc homeless population</h1>
+            </div>
+            <div class="controls">
+                <div id="filterButtons">
+                    <button id="buttonManhattan" class="clicked" onclick="filterData('Manhattan')">Manhattan</button>
+                    <button id="buttonBronx" onclick="filterData('Bronx')">Bronx</button>
+                    <button id="buttonBrooklyn" onclick="filterData('Brooklyn')">Brooklyn</button>
+                    <button id="buttonQueens" onclick="filterData('Queens')">Queens</button>
+                    <button id="buttonStatenIsland" onclick="filterData('Staten Island')">Staten Island</button>
+                    <button id="buttonSubways" onclick="filterData('Subways')">Subway</button>
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="help">
+                <img id="brc" src="img/BRC.png" alt="">
+                <h2>Bowery Residents' Committee</h2>
+                <h4>BRC offers shelter, outreach, and other services to homeless individuals in NYC. They can be reached at (212) 803-5700.</h4>
+            </div>
+            <div class="help2">
+                <img id="cares" src="img/cares.png" alt="">
+                <h2>New York Cares</h2>
+                <h4>This organization offers volunteer opportunities to assist homeless individuals in NYC. While not a helpline, they provide valuable support. Their website is <a href="https://www.newyorkcares.org/"> www.newyorkcares.org.</a>
+                </h4>
+            </div>
+            <div class="help3">
+                <img id="nyc" src="img/nyc.png" alt="">
+                <h2>NYC Department of Homeless Services</h2>
+                <h4>The DHS operates several programs and shelters for homeless individuals and families in NYC. They can be reached at 311 or through their <a href="https://www.nyc.gov/site/dhs/index.page">website.</a>
+                </h4>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>Source: NYC OpenData</footer>
+</html>
