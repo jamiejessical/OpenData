@@ -356,7 +356,7 @@ h4{
     #chart {
         position: absolute;
         width: 75%;
-        bottom: -25%;
+        bottom: -20%;
         left: 8%;
         transform: rotate(-3deg);
         mix-blend-mode: multiply;
