@@ -383,13 +383,13 @@ h4{
     
     .controls {
         position: absolute;
-        right: 3%;
+        right: 2%;
         top: 75%;
         background-image: url(img/square2.png);
         background-size: contain;
         background-repeat: no-repeat;
         height: 100%;
-        width: 50%;
+        width: 40%;
         transform: rotate(5deg);
         filter: drop-shadow(5px 10px 7px rgba(26, 12, 2, 0.708));
         animation-name: slideLeft;
