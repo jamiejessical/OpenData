@@ -1,5 +1,6 @@
 body {
     margin: 0%;
+    cursor: url('img/Cursor.png'), pointer;
 }
 
 @font-face {
@@ -10,7 +11,14 @@ body {
 @font-face {
     font-family: 'marker2';
     src: url(fonts/YRDZST\ Medium.ttf);
-  }
+}
+
+#p5-sketch {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 90%;
+}
+
   
 footer{
     width: 100%;
@@ -41,13 +49,13 @@ footer{
 
 .title{
     position: absolute;
-    top: 6%;
-    left: -1%;
+    top: 1%;
+    left: 1%;
     background-image: url(img/square.png);
     background-size: contain;
     background-repeat: no-repeat;
     height: 50%;
-    width: 32%;
+    width: 27%;
     transform: rotate(-12deg);
     filter: drop-shadow(5px 10px 7px rgba(26, 12, 2, 0.708));
     animation-name: slideRight;
@@ -62,37 +70,39 @@ footer{
 
 .introduction{
     position: absolute;
-    top: 8%;
     margin: 9%;
+    top: -2%;
     transform: rotate(-3deg);
     transition: ease 0.5s;
 }
 
 .introduction > img {
-    width: 40%;
+    width: 58%;
     height: auto;
     display: none;
     position: relative;
-    left: -4%;
-    transform: rotate(4deg);
+    right: 2%;
+    transform: rotate(-2deg);
     filter: drop-shadow(3px 3px 8px rgba(26, 12, 2, 0.708));
     animation-name: slideRight2;
     animation-duration: 1.5s;
     transition: ease 0.5s;
+    -webkit-user-drag: none;
+    user-select: none;
 }
 
 @keyframes slideRight2 {
     from {transform: translateX(-300px) rotate(20deg);}
-    to {transform: translateX(0px) rotate(4deg);}
+    to {transform: translateX(0px) rotate(-2deg);}
 }
 
 #chart {
     position: absolute;
-    width: 45%;
+    width: 35%;
     max-width: 75%;
-    top: 80%;
-    left: 40%;
-    transform: rotate(-3deg);
+    bottom: 20%;
+    right: 8%;
+    transform: rotate(1deg);
     mix-blend-mode: multiply;
 }
 
@@ -117,7 +127,7 @@ footer{
     position: absolute;
     font-family: Arial, sans-serif;
     font-weight: bold;
-    font-size: 3vw;
+    font-size: 2vw;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -135,6 +145,7 @@ footer{
     transform: translate(-50%, -50%);
     color: #fff;
     text-align: center;
+    user-select: none;
 }
 
 .total-container {
@@ -142,21 +153,22 @@ footer{
     font-family: 'marker2';
     font-size: 4vw;
     letter-spacing: -3.5px;
-    top: 10px;
-    left: 5%;
-    transform: rotate(-5deg);
+    top: 20px;
+    left: 3%;
+    transform: rotate(2deg);
+    user-select: none;
 }
 
 .controls {
     position: absolute;
-    right: 3%;
-    top: 25%;
+    right: 1.5%;
+    top: 50%;
     background-image: url(img/square2.png);
     background-size: contain;
     background-repeat: no-repeat;
     height: 100%;
-    width: 25%;
-    transform: rotate(5deg);
+    width: 20%;
+    transform: rotate(3deg);
     filter: drop-shadow(5px 10px 7px rgba(26, 12, 2, 0.708));
     animation-name: slideLeft;
     animation-duration: 1.5s;
@@ -164,7 +176,7 @@ footer{
 
 @keyframes slideLeft {
     from {transform: translateY(-50px) translateX(350px) rotate(10deg);}
-    to {transform: translateX(0px) rotate(5deg);}
+    to {transform: translateX(0px) rotate(3deg);}
     
 }
 
@@ -173,15 +185,16 @@ footer{
     display: flex;
     flex-direction: column;
     transform: rotate(7deg);
-    top: 10%;
-    right: 9%;
+    top: 8%;
+    right: 12%;
     margin: 0%;
     mix-blend-mode: multiply;
+    user-select: none;
 }
 
 button{
     font-family: 'marker';
-    font-size: 4vw;
+    font-size: 3.2vw;
     letter-spacing: -2px;
     border: none;
     background: none;
@@ -217,7 +230,7 @@ button:focus{
 
 .container2{
     position: absolute;
-    top: 45%;
+    top: 48%;
     margin: 15%;
     display: flex;
     flex-direction: row;
@@ -235,6 +248,8 @@ button:focus{
     margin-left: 10%;
     margin-bottom: -13%;
     filter: drop-shadow(5px 10px 7px rgba(26, 12, 2, 0.708));
+    -webkit-user-drag: none;
+    user-select: none;
 }
 
 #brc:hover {
@@ -247,6 +262,8 @@ button:focus{
     margin-left: 15%;
     margin-bottom: -10%;
     filter: drop-shadow(5px 10px 7px rgba(26, 12, 2, 0.708));
+    -webkit-user-drag: none;
+    user-select: none;
 }
 
 #cares:hover {
@@ -259,6 +276,8 @@ button:focus{
     margin-left: 10%;
     margin-bottom: -15%;
     filter: drop-shadow(5px 10px 7px rgba(26, 12, 2, 0.708));
+    -webkit-user-drag: none;
+    user-select: none;
 }
 
 #nyc:hover {
@@ -273,12 +292,13 @@ h1{
     background-position: 70%;
     position: absolute;
     line-height: 70%;
-    top: -2%;
+    top: -3%;
     font-family: 'marker';
-    font-size: 6vw;
+    font-size: 5.3vw;
     max-width: 100%;
     text-align: center;
     mix-blend-mode: multiply;
+    user-select: none;
 }
 
 h2{
@@ -288,6 +308,7 @@ h2{
     max-width: 100%;
     text-align: center;
     mix-blend-mode: multiply;
+    user-select: none;
 }
 
 h3{
@@ -297,17 +318,20 @@ h3{
     mix-blend-mode: multiply;
     margin-left: 120%;
     margin-top: 15%;
+    user-select: none;
 }
 
 p{
-    line-height: 90%;
+    line-height: 98%;
     letter-spacing: -1px;
     font-family: 'marker';
     font-size: 1.8vw;
-    width: 32%;
+    width: 40%;
+    margin-left: 8%;
     mix-blend-mode: multiply;
+    text-align: center;
     z-index: 4;
-
+    user-select: none;
 }
 
 h4{
@@ -317,6 +341,7 @@ h4{
     font-size: 1.8vw;
     text-align: center;
     mix-blend-mode: multiply;
+    user-select: none;
 }
 
 @media (max-width: 1100px) {
@@ -333,12 +358,12 @@ h4{
         height: 30px;
         font-size: 2vw;
     }
-    
+
 
     .title{
+        width: 68%;
         top: 5%;
-        width: 75%;
-        left: -1%;
+        left: 3%;
     }
 
     .introduction{
@@ -349,14 +374,14 @@ h4{
     }
     
     .introduction > img {
-        width: 85%;
-        left: -50px;
+        width: 105%;
+        left: -60px;
     }
 
     #chart {
         position: absolute;
-        width: 75%;
-        bottom: -32%;
+        width: 100%;
+        bottom: -28%;
         left: 8%;
         transform: rotate(-3deg);
         mix-blend-mode: multiply;
@@ -364,10 +389,12 @@ h4{
     
     .label-estimate {
         font-size: 5vw;
+        user-select: none;
     }
     
     .label-year {
         font-size: 3vw;
+        user-select: none;
     }
 
     .total-container {
@@ -383,14 +410,13 @@ h4{
     
     .controls {
         position: absolute;
-        right: 3%;
-        top: 75%;
+        right: 2%;
+        top: 78%;
         background-image: url(img/square2.png);
         background-size: contain;
         background-repeat: no-repeat;
         height: 100%;
-        width: 45%;
-        transform: rotate(5deg);
+        width: 44%;
         filter: drop-shadow(5px 10px 7px rgba(26, 12, 2, 0.708));
         animation-name: slideLeft;
         animation-duration: 1.5s;
@@ -401,10 +427,11 @@ h4{
         display: flex;
         flex-direction: column;
         transform: rotate(7deg);
-        top: 6%;
-        right: 12%;
+        top: 5%;
+        right: 13%;
         margin: 0%;
         mix-blend-mode: multiply;
+        user-select: none;
     }
     
     button{
@@ -483,7 +510,7 @@ h4{
         width: 70%;
         mix-blend-mode: multiply;
         z-index: 4;
-    
+        margin-left: -2%;    
     }
     
     h4{

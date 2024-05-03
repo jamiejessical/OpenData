@@ -1,3 +1,74 @@
+function setup() {
+    var canvasHeight = windowHeight < 1100 ? 2750 : 2000;
+    var canvas = createCanvas(displayWidth, canvasHeight);
+    canvas.parent('p5-sketch'); 
+}
+
+let brushSize = 10;
+let f = 0.5;
+let spring = 0.4;
+let friction = 0.45;
+let v = 0.5;
+let r = 0;
+let vx = 0;
+let vy = 0;
+let splitNum = 100;
+let diff = 2;
+function draw() {
+  if (mouseIsPressed) {
+    if (!f) {
+      f = true;
+      x = mouseX;
+      y = mouseY;
+    }
+    vx += (mouseX - x) * spring;
+    vy += (mouseY - y) * spring;
+    vx *= friction;
+    vy *= friction;
+
+    v += sqrt(vx * vx + vy * vy) - v;
+    v *= 0.55;
+
+    oldR = r;
+    r = brushSize - v;
+    var num = random(0.1, 1);
+    for (let i = 0; i < splitNum; ++i) {
+      oldX = x;
+      oldY = y;
+      x += vx / splitNum;
+      y += vy / splitNum;
+      oldR += (r - oldR) / splitNum;
+      if (oldR < 1) {
+        oldR = 1;
+      }
+      strokeWeight(oldR + diff);
+      line(
+        x + random(0, 2),
+        y + random(0, 2),
+        oldX + random(0, 2),
+        oldY + random(0, 2)
+      );
+      strokeWeight(oldR);
+      line(
+        x + diff * random(0.1, 2),
+        y + diff * random(0.1, 2),
+        oldX + diff * random(0.1, 2),
+        oldY + diff * random(0.1, 2)
+      );
+      line(
+        x - diff * random(0.1, 2),
+        y - diff * random(0.1, 2),
+        oldX - diff * random(0.1, 2),
+        oldY - diff * random(0.1, 2)
+      );
+    }
+  } else if (f) {
+    vx = vy = 0;
+    f = false;
+  }
+}
+
+
 async function fetchData() {
     const apiUrl = 'https://data.cityofnewyork.us/resource/5t4n-d72c.json';
     try {
@@ -105,9 +176,9 @@ function displayData(data) {
         barContainer.appendChild(labelYear);
         chart.appendChild(barContainer);
 
-        const barWidthPercentage = 0.7;
+        const barWidthPercentage = 0.6;
         const barWidth = (chart.offsetWidth / data.length) * barWidthPercentage;
-        const barMargin = -6;
+        const barMargin = 2;
         const barOffset = index * (barWidth + barMargin);
 
         barContainer.style.width = barWidth + 'px';
@@ -156,3 +227,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
