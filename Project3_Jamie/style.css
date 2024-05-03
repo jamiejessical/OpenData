@@ -30,6 +30,7 @@ footer{
     font-size: 0.8vw;
     text-align: center;
     align-content: center;
+    user-select: none;
 }
 
 .background {
@@ -133,6 +134,7 @@ footer{
     transform: translate(-50%, -50%);
     color: #fff;
     text-align: center;
+    user-select: none;
 }
 
 .label-year {

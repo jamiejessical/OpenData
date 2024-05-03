@@ -1,8 +1,14 @@
 function setup() {
-    var canvasHeight = windowHeight < 1100 ? 2750 : 2000;
+    var canvasHeight;
+    if (windowHeight <= 1100) {
+        canvasHeight = 2000;
+    } else {
+        canvasHeight = 2750;
+    }
     var canvas = createCanvas(displayWidth, canvasHeight);
     canvas.parent('p5-sketch'); 
 }
+
 
 let brushSize = 10;
 let f = 0.5;
