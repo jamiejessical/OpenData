@@ -389,7 +389,7 @@ h4{
         background-size: contain;
         background-repeat: no-repeat;
         height: 100%;
-        width: 40%;
+        width: 45%;
         transform: rotate(5deg);
         filter: drop-shadow(5px 10px 7px rgba(26, 12, 2, 0.708));
         animation-name: slideLeft;
@@ -409,7 +409,7 @@ h4{
     
     button{
         font-family: 'marker';
-        font-size: 8vw;
+        font-size: 7vw;
         letter-spacing: -2px;
         border: none;
         background: none;
