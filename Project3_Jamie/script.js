@@ -1,9 +1,9 @@
 function setup() {
-    var canvasHeight;
-    if (windowHeight <= 1100) {
-        canvasHeight = 2000;
-    } else {
+    var canvasWidth;
+    if (windowWidth <= 900) {
         canvasHeight = 2750;
+    } else {
+        canvasHeight = 2000;
     }
     var canvas = createCanvas(displayWidth, canvasHeight);
     canvas.parent('p5-sketch'); 
